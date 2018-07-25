@@ -27,8 +27,8 @@ restService.post("/echo", function(req, res) {
        speech = "testen";
        break;
        
-     case "test3" : 
-       speech = "test3";
+     case "testenn" : 
+       speech = "testenn";
        break;
    }
      
