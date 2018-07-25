@@ -20,15 +20,15 @@ restService.post("/echo", function(req, res) {
        
      case "test" :
        
-       speech = "test1";
+       speech = 'test1';
        break;
        
      case "testen" :
-       speech = "testen";
+       speech = 'testen';
        break;
        
      case "test4" : 
-       speech = "test4";
+       speech = 'test4';
        break;
    }
      
