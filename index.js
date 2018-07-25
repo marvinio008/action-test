@@ -14,13 +14,15 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req,res) {
+  
+  var speech;
 
   if (req.body.result.parameters.echtoText === 'test') {
     
-    var speech = "hat geklappt";
+    speech = 'hat geklappt';
     
   }else 
-    var speech = "hat nicht geklappt!";
+    speech = 'hat nicht geklappt!';
   
 }
   
