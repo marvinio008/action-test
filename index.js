@@ -27,22 +27,7 @@ restService.post("/echo", function(req,res) {
 });
              
          
-   
-
-restService.post("/echo", function(req, res) {
   
- 
-  if (req.body.result.parameters.echoText = 'test') {
-    
-  var speech = 'hat geklappt';
-  
-  return res.json({
-    fulfillmentText:speech,
-    source: "DialogflowTest"
-  });
-    
-});
-
 restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.result.parameters.AudioSample.toLowerCase()) {
