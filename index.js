@@ -15,7 +15,7 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req,res) {
 
-  if (req.body.result.parameters.echtoText = 'test') {
+  if (req.body.result.parameters.echtoText === 'test') {
     
     var speech = "hat geklappt";
     
