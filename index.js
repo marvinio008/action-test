@@ -14,12 +14,16 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req,res) {
-   var speech =
-       req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
-      : "Diesen Hof scheint es nicht zu geben";
+
+  if (req.body.result.parameters.echtoText = 'test') {
+    
+    var speech = "hat geklappt";
+    
+  }else 
+    var speech = "hat nicht geklappt!";
+  
+}
+  
   return res.json({
     fulfillmentText:speech,
     source: "DialogflowTest"
