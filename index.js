@@ -14,16 +14,8 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/wertstoffhoefe", function(req, res) {
- var speech = "";
- //   req.body.result &&
-  //  req.body.result.parameters &&
-   // req.body.result.parameters.wertstoffhof
-    //  ? req.body.result.parameters.wertstoffhof
-     // : "Ich konnte den angegebenen Wertstoffhof nicht finden. Bitte frage mich erneut.";
-  if (req.body.paramerters.wertstoffhof === 'Bornheim') {
-    speech = "Die Adresse vom Wertstoffhof in Bornheim lautet: Weidenbornstr. 40";
-  }else {
-    speech = 
+ 
+  var speech = 
     req.body.result &&
    req.body.result.parameters &&
   req.body.result.parameters.wertstoffhof
