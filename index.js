@@ -21,8 +21,7 @@ restService.post("/wertstoffhoefe", function(req, res) {
   req.body.result.parameters.wertstoffhof
    ? req.body.result.parameters.wertstoffhof
   : "Ich konnte den angegebenen Wertstoffhof nicht finden. Bitte frage mich erneut.";
-  }
-    
+      
   return res.json({
     fulfillmentText: speech,
     source: "DialogflowTest"
