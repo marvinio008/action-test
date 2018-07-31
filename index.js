@@ -13,13 +13,26 @@ restService.use(
 
 restService.use(bodyParser.json());
 
+restService.post("/wertstoffhoefe", function(req, res) {
+ var speech =
+    req.body.result &&
+    req.body.result.parameters &&
+    req.body.result.parameters.wertstoffhof
+      ? req.body.result.parameters.wertstoffhof
+      : "Ich konnte den angegebenen Wertstoffhof nicht finden. Bitte frage mich erneut.";
+  return res.json({
+    fulfillmentText: speech,
+    source: "DialogflowTest"
+  });
+});
+
 restService.post("/echo", function(req, res) {
  var speech =
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.echoText
       ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
+      : "Irgendetwas ist schiefgelaufen. Bitte frage mich erneut.";
   return res.json({
     fulfillmentText: speech,
     source: "DialogflowTest"
