@@ -51,7 +51,7 @@ restService.post("/wertstoffhoefe", function(req, res) {
                                   }
                               }
                           ],
-                          "imageDisplayOptions": "GREY"
+                          "imageDisplayOptions": "WHITE"
                       }
                   }
               ]
