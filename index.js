@@ -33,7 +33,7 @@ restService.post("/wertstoffhoefe", function(req, res) {
               "items": [
                   {
                       "simpleResponse": {
-                          "textToSpeech": speech
+                          "textToSpeech": "hallo"
                       }
                   },
                   {
