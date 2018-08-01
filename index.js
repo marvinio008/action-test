@@ -24,6 +24,22 @@ restService.post("/wertstoffhoefe", function(req, res) {
       
   return res.json({
     fulfillmentText: speech,
+    messages: [
+  {
+    "buttons": [
+      {
+        "postback": "Card Link URL or text",
+        "text": "Card Link Title"
+      }
+    ],
+    "imageUrl": "http://urltoimage.com",
+    "platform": "google",
+    "subtitle": "Card Subtitle",
+    "title": "Card Title",
+    "type": 1
+  }
+],
+
     fulfillmentMessages: [
     {
       "card": {
