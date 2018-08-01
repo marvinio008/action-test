@@ -18,8 +18,8 @@ restService.post("/wertstoffhoefe", function(req, res) {
   var speech = 
     req.body.result &&
    req.body.result.parameters &&
-  req.body.result.parameters.wertstoffhof
-   ? req.body.result.parameters.wertstoffhof
+  req.body.result.parameters.Wertstoffhoefe
+   ? req.body.result.parameters.Wertstoffhoefe
   : "Ich konnte den angegebenen Wertstoffhof nicht finden. Bitte frage mich erneut.";
       
   return res.json({
