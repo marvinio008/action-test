@@ -33,14 +33,14 @@ restService.post("/wertstoffhoefe", function(req, res) {
               "items": [
                   {
                       "simpleResponse": {
-                          "textToSpeech": "This is a Basic Card:"
+                          "textToSpeech": speech
                       }
                   },
                   {
                       "basicCard": {
                           "title": "Wertstoffhöfe FES",
                           "image": {
-                              "url": "https://www.fes-frankfurt.de/fileadmin/logo/fes.svg",
+                              "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZaXONOhEXIPdh77ARJVoUOJk0WfLvN7G8KNtkGadciKTkbAkM9zPvnA",
                               "accessibilityText": "FES Logo"
                           },
                           "buttons": [
