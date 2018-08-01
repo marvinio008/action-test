@@ -31,7 +31,11 @@ restService.post("/wertstoffhoefe", function(req, res) {
           "expectUserResponse": true,
           "richResponse": {
               "items": [
-                  
+                  {
+                      "simpleResponse": {
+                          "textToSpeech": "Die FES hat mehrere Standorte. Ich habe hier einen Link zu den Öffnungszeiten aller Standorte."
+                      } 
+                  },
                   {
                       "basicCard": {
                           "title": "Wertstoffhöfe FES",
@@ -47,7 +51,7 @@ restService.post("/wertstoffhoefe", function(req, res) {
                                   }
                               }
                           ],
-                          "imageDisplayOptions": "WHITE"
+                          "imageDisplayOptions": "GREY"
                       }
                   }
               ]
