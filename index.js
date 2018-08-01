@@ -31,11 +31,7 @@ restService.post("/wertstoffhoefe", function(req, res) {
           "expectUserResponse": true,
           "richResponse": {
               "items": [
-                  {
-                      "simpleResponse": {
-                          "textToSpeech": "hallo"
-                      }
-                  },
+                  
                   {
                       "basicCard": {
                           "title": "Wertstoffhöfe FES",
