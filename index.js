@@ -38,16 +38,16 @@ restService.post("/wertstoffhoefe", function(req, res) {
                   },
                   {
                       "basicCard": {
-                          "title": "card title",
+                          "title": "Wertstoffhöfe FES",
                           "image": {
-                              "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
-                              "accessibilityText": "Google Logo"
+                              "url": "https://www.fes-frankfurt.de/fileadmin/logo/fes.svg",
+                              "accessibilityText": "FES Logo"
                           },
                           "buttons": [
                               {
-                                  "title": "Button Title",
+                                  "title": "Zur Homepage",
                                   "openUrlAction": {
-                                      "url": "https://www.google.com"
+                                      "url": "https://www.fes-frankfurt.de/leistungen/service/kofferraumservice/"
                                   }
                               }
                           ],
