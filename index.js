@@ -27,13 +27,13 @@ restService.post("/wertstoffhoefe", function(req, res) {
     fulfillmentMessages: [
     {
       "card": {
-        "title": "card title",
-        "subtitle": "card text",
-        "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
+        "title": "Wertstoffhöfe der FES",
+        "subtitle": "Die FES hat mehrere Standorte. Klicken Sie auf den Button und ich leite Sie zu unserer Homepage weiter. Dort finden sie alle Adressen sowie die Öffnungszeiten.",
+        "imageUri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZaXONOhEXIPdh77ARJVoUOJk0WfLvN7G8KNtkGadciKTkbAkM9zPvnA",
         "buttons": [
           {
-            "text": "button text",
-            "postback": "https://assistant.google.com/"
+            "text": "Zur Homepage",
+            "postback": "https://fes-frankfurt.de/leistungen/service/kofferraumservice/"
           }
         ]
       }
