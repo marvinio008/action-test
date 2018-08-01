@@ -13,20 +13,73 @@ restService.use(
 
 restService.use(bodyParser.json());
 
+restService.post("/wertstoffhoefe", function(req, res) {
+ 
+  var speech = 
+    req.body.result &&
+   req.body.result.parameters &&
+  req.body.result.parameters.Wertstoffhoefe
+   ? req.body.result.parameters.Wertstoffhoefe
+  : "Ich konnte den angegebenen Wertstoffhof nicht finden. Bitte frage mich erneut.";
+      
+  return res.json({
+    fulfillmentText: speech,
+    fulfillmentMessages: [],
+    source: "DialogflowTest",
+    payload : {
+      "google": {
+          "expectUserResponse": true,
+          "richResponse": {
+              "items": [
+                  {
+                      "simpleResponse": {
+                          "textToSpeech": "This is a Basic Card:"
+                      }
+                  },
+                  {
+                      "basicCard": {
+                          "title": "card title",
+                          "image": {
+                              "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+                              "accessibilityText": "Google Logo"
+                          },
+                          "buttons": [
+                              {
+                                  "title": "Button Title",
+                                  "openUrlAction": {
+                                      "url": "https://www.google.com"
+                                  }
+                              }
+                          ],
+                          "imageDisplayOptions": "WHITE"
+                      }
+                  }
+              ]
+          }
+      }
+  },
+  "outputContexts": [],
+  "followupEventInput": {}
+
+
+  });
+});
+
 restService.post("/echo", function(req, res) {
-  var speech =
+ var speech =
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.echoText
       ? req.body.result.parameters.echoText
-      : "Seems like some problem. Speak again.";
+      : "Irgendetwas ist schiefgelaufen. Bitte frage mich erneut.";
   return res.json({
-    speech: speech,
-    displayText: speech,
-    source: "webhook-echo-sample"
+    fulfillmentText: speech,
+    source: "DialogflowTest"
   });
 });
-
+             
+         
+  
 restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.result.parameters.AudioSample.toLowerCase()) {
@@ -198,3 +251,4 @@ restService.post("/slack-test", function(req, res) {
 restService.listen(process.env.PORT || 8000, function() {
   console.log("Server up and listening");
 });
+
