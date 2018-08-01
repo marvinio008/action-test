@@ -33,7 +33,7 @@ restService.post("/wertstoffhoefe", function(req, res) {
               "items": [
                   {
                       "simpleResponse": {
-                          "textToSpeech": "hallo"
+                          "textToSpeech": "Die FES hat mehrere Standorte. Ich habe hier einen Link mit den Öffnungszeiten und Adressen zu allen Standorten"
                       } 
                   },
                   {
